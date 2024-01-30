@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pyroll Application</title>
+</head>
+
+<header>
+<!---------------------------------------------------------------------------nav------------------------------------------------------------->
+  
+<div style="background-color: #add8e6; padding: 20px; text-align: center;">
+       
+    
+    <div style="border: 1px solid #cccccc; padding: 10px; margin-top: 20px;">
+ 
+
+        <div style="display: flex; max-width: 1600px; max-height: 800px; margin: auto; background-color: #add8e6; padding: 20px; border-radius: 0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: left; position: relative;">
+
+            <div style="width: 70%; padding-right: 20px;">
+                <!-- <h1 style="font-family: 'Roboto', sans-serif; font-weight: bold; text-transform: capitalize; color: #607d8b; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-left: 60%;">Human Resource Manangement System</h1> -->
+        
+                <h1 style="font-family: 'Roboto', sans-serif; font-weight: bold; text-transform: capitalize; color: #607d8b; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); white-space: nowrap; text-align: left; margin-right: 10%;">Human Resource Management System</h1>
+              
+
+
+        
+        <!-------------------------------------------trying to add nav------------------------------------------------------------------------------>
+        
+         
+        
+        
+        
+         <!------------------------------------------------------------Nav menu's-------------------------------------------------------->
+        <!------------------------------------------------------------Nav menu's-------------------------------------------------------->
+        <nav style="background-color: #add8e6; padding: 10px;">
+            <ul style="list-style-type: none; margin-top: 20px; text-align: center; white-space: nowrap;">
+                <span style="display: inline-block; margin-right: 20px;">
+                    <li>
+                        <a href="index.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 18px;">Home</a>
+                    </li>
+                </span>
+                <span style="display: inline-block; margin-right: 20px;" onmouseover="showDropdown1()" onmouseout="hideDropdown1()">
+                    <li>
+                        <a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 18px;">Employee &#9662;</a>
+                        <ul class="dropdown1" style="list-style-type: none; padding: 0; display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
+                            <li><a href="employee_subpage_Management.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Management</a></li>
+                            <li><a href="employee_subpage_request.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Request</a></li>
+                            <li><a href="employee_subpage_placement.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Placement</a></li>
+                            <li><a href="employee_subpage_employmentterms.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Employement Terms</a></li>
+                            <li><a href="employee_subpage_education.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Education</a></li>
+                            <li><a href="employee_subpage_experience.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Experience</a></li>
+                            <li><a href="employee_subpage_training.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Training</a></li>
+                            <li><a href="employee_subpage_legaldocument.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Legal Document</a></li>
+                            <li><a href="employee_subpage_customrole.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Custom Role</a></li>
+                            <li><a href="employee_subpage_webaccount.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Web Account</a></li>
+                            <li><a href="employee_subpage_hrrole.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">HR Role</a></li>
+                        </ul>
+                    </li>
+                </span>
+                <span style="display: inline-block; margin-right: 20px;" onmouseover="showExpenseDropdown()" onmouseout="hideExpenseDropdown()">
+                    <li>
+                        <a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 18px;">Expense Claim &#9662;</a>
+                        <ul class="expense-dropdown" style="list-style-type: none; padding: 0; display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
+                            <li><a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Management</a></li>
+                            <li><a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Review</a></li>
+                            <li><a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Transaction Report</a></li>
+                            <li><a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Category</a></li>
+                            <li><a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Type</a></li>
+                            <li><a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Approval Workflow</a></li>
+                        </ul>
+                    </li>
+                </span>
+                
+                <span style="display: inline-block; margin-right: 20px;" onmouseover="showLeaveDropdown()" onmouseout="hideLeaveDropdown()">
+                    <li>
+                        <a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 18px;">Leave &#9662;</a>
+                        <ul class="leave-dropdown" style="list-style-type: none; padding: 0; display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
+                            <li><a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Management</a></li>
+                            <li><a href="leave_subpage_planner.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Planner</a></li>
+                            <li><a href="leave_subpage_schdule.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Schedule</a></li>
+                            <li><a href="leave_subpage_review.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Review</a></li>
+                            <li><a href="leave_subpage_transactionreport.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Transaction Report</a></li>
+                            <li><a href="leave_subpage_entitlementreport.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Entitlement Report</a></li>
+                            <li><a href="leave_subpage_type.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Type</a></li>
+                            <li><a href="leave_subpage_earningpolicy.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Earning Policy</a></li>
+                            <li><a href="leave_subpage_approvalworkflow.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Approval Workflow</a></li>
+                            <li><a href="leave_subpage_workday.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Workday</a></li>
+                            <li><a href="leave_subpage_holiday.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Holiday</a></li>
+                        </ul>
+                    </li>
+                </span>
+                <span style="display: inline-block; margin-right: 20px;" onmouseover="showAttendanceDropdown()" onmouseout="hideAttendanceDropdown()">
+                    <li>
+                        <a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 18px;">Attendance &#9662;</a>
+                        <ul class="attendance-dropdown" style="list-style-type: none; padding: 0; display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
+                            <li><a href="attendence_subpage_management.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Management</a></li>
+                            <li><a href="attendence_subpage_timeclockreport.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Time Clock</a></li>
+                            <li><a href="attendence_subpage_feildcheckin.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Field Check-in</a></li>
+                            <li><a href="attendence_subpage_workday.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Workday</a></li>
+                            <li><a href="attendence_subpage_holiday.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Holiday</a></li>
+                            <li><a href="attendence_subpage_settings.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Setting</a></li>
+                            
+                        </ul>
+                    </li>
+                </span>
+                <span style="display: inline-block; margin-right: 20px;" onmouseover="showPayrollDropdown()" onmouseout="hidePayrollDropdown()">
+                    <li>
+                        <a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 18px;">Payroll &#9662;</a>
+                        <ul class="payroll-dropdown" style="list-style-type: none; padding: 0; display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
+                            <li><a href="payroll_subpage_process.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Salary Adjustment</a></li>
+                            <li><a href="payroll_subpage_annualsalarystatement.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Process</a></li>
+                            <li><a href="payroll_subpage_annualsalarystatement.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Annual Salary Statement</a></li>
+                            <li><a href="payroll_subpage_earning.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Earning</a></li>
+                            <li><a href="payroll_subpage_deduction.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Deduction</a></li>
+                            <li><a href="payroll_subpage_bonus.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Bonus</a></li>
+                            <li><a href="payroll_subpage_statutorycontribution.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Statutory Contribution</a></li>
+                            <li><a href="payroll_subpage_statutorytable.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Statutory Table</a></li>
+                            <li><a href="payroll_subpage_settings.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Settings</a></li>
+                        </ul>
+                    </li>
+                </span>
+                <span style="display: inline-block; margin-right: 20px;" onmouseover="showProfileDropdown()" onmouseout="hideProfileDropdown()">
+                    <li>
+                        <a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 18px;">Employer &#9662;</a>
+                        <ul class="profile-dropdown" style="list-style-type: none; padding: 0; display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
+                            <li><a href="employer_subpage_information.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Information</a></li>
+                            <li><a href="employer_subpage_jobposition.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Job Position</a></li>
+                            <li><a href="employer_subpage_contact.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Contact</a></li>
+                            <li><a href="employer_subpage_deparment.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Department</a></li>
+                            <li><a href="employer_subpage_branch.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Branch</a></li>
+                            <li><a href="employer_subpage_level.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Level</a></li>
+                            <li><a href="employer_subpage_bank.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Bank</a></li>
+                            <li><a href="employer_subpage_course.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Course</a></li>
+                            <li><a href="employer_subpage_training.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Training</a></li>
+                        </ul>
+                    </li>
+                </span>
+        
+        
+        <!------------------------------------------adding more nav's-------------------------------------------------------------------------->
+        <!-- Additional menu item 1 -->
+         
+        
+        <!-- Additional menu item 2 -->
+        <span style="display: inline-block; margin-right: 20px;" onmouseover="showDropdown2()" onmouseout="hideDropdown2()">
+            <li>
+                <a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 18px;">Incident &#9662;</a>
+                <ul class="dropdown2" style="list-style-type: none; padding: 0; display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
+                    <li><a href="incident_subpage_manangement.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Management</a></li>
+                    <li><a href="incident_subpage_causeless.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Causeless</a></li>
+                    <li><a href="incident_subpage_category.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Category</a></li>
+                    <li><a href="incident_subpage_type.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Type</a></li>
+                    <li><a href="incident_subpage_decision.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Decision</a></li>
+                </ul>
+            </li>
+        </span>
+        
+        <!-- Additional menu item 3 -->
+        <span style="display: inline-block; margin-right: 20px;" onmouseover="showDropdown3()" onmouseout="hideDropdown3()">
+            <li>
+                <a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 18px;">Document Workflow &#9662;</a>
+                <ul class="dropdown3" style="list-style-type: none; padding: 0; display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
+                    <li><a href="documentworkflow_subpage_management.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Management</a></li>
+                    <li><a href="documentworkflow_subpage_review.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Review</a></li>
+                    <li><a href="documentworkflow_subpage_approvalworkflow.html" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 16px;">Approval Workflow</a></li>
+                </ul>
+            </li>
+        </span>
+        
+        <!-- Existing menu item... -->
+        </ul>
+        </nav>
+        
+        <style>
+        /* Your existing CSS for hover effect */
+        nav ul li a {
+        position: relative;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Added transition effect for color change */
+        }
+        
+        nav ul li a:hover {
+        color: #1d2522; /* Slightly darker color on hover */
+        animation: blink-animation 0.6s infinite;
+        text-decoration: none;
+        }
+        
+        nav ul li a:hover:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #1d2522; /* Slightly darker color for underline on hover */
+        }
+        
+        /* Additional CSS for the dropdown */
+        .dropdown1 li,
+        .dropdown2 li,
+        .dropdown3 li {
+        display: block;
+        }
+        
+        .dropdown1 li:hover,
+        .dropdown2 li:hover,
+        .dropdown3 li:hover {
+        background-color: #7bb2cc; /* Slightly darker color on hover for dropdown */
+        }
+        </style>
+        
+        <script>
+        // JavaScript for handling additional dropdowns
+        function showDropdown1() {
+        hideDropdown2();
+        hideDropdown3();
+        var dropdown = document.querySelector('.dropdown1');
+        dropdown.style.display = 'block';
+        }
+        
+        function hideDropdown1() {
+        var dropdown = document.querySelector('.dropdown1');
+        dropdown.style.display = 'none';
+        }
+        
+        function showDropdown2() {
+        hideDropdown1();
+        hideDropdown3();
+        var dropdown = document.querySelector('.dropdown2');
+        dropdown.style.display = 'block';
+        }
+        
+        function hideDropdown2() {
+        var dropdown = document.querySelector('.dropdown2');
+        dropdown.style.display = 'none';
+        }
+        
+        function showDropdown3() {
+        hideDropdown1();
+        hideDropdown2();
+        var dropdown = document.querySelector('.dropdown3');
+        dropdown.style.display = 'block';
+        }
+        
+        function hideDropdown3() {
+        var dropdown = document.querySelector('.dropdown3');
+        dropdown.style.display = 'none';
+        }
+        </script>
+        <!------------------------------------------------------adding more navs--------------------------------------------------------------------------->
+        
+        <!-----------extra nav------------ <span style="display: inline-block;">
+                    <li>
+                        <a href="#" style="text-decoration: none; color: #607d8b; font-weight: bold; font-size: 18px;">User Guide</a>
+                    </li>
+                </span>   ------------------------------------------------------------------------>
+                
+            </ul>
+        </nav>
+        
+        <style>
+            /* Your existing CSS for hover effect */
+            nav ul li a {
+                position: relative;
+                text-decoration: none;
+                transition: color 0.3s ease; /* Added transition effect for color change */
+            }
+        
+            nav ul li a:hover {
+                color: #1d2522; /* Slightly darker color on hover */
+                animation: blink-animation 0.6s infinite;
+                text-decoration: none;
+            }
+        
+            nav ul li a:hover:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background-color: #1d2522; /* Slightly darker color for underline on hover */
+            }
+        
+            /* Additional CSS for the dropdown */
+            .expense-dropdown li,
+            .attendance-dropdown li,
+            .payroll-dropdown li,
+            .profile-dropdown li,
+            .leave-dropdown li {
+                display: block;
+            }
+        
+            .expense-dropdown li:hover,
+            .attendance-dropdown li:hover,
+            .payroll-dropdown li:hover,
+            .profile-dropdown li:hover,
+            .leave-dropdown li:hover {
+                background-color: #7bb2cc; /* Slightly darker color on hover for dropdown */
+            }
+        </style>
+        
+        <script>
+            // JavaScript for handling dropdown display
+            function showExpenseDropdown() {
+                hideAttendanceDropdown();
+                hidePayrollDropdown();
+                hideProfileDropdown();
+                hideLeaveDropdown(); // Hide other dropdowns if they are open
+                var dropdown = document.querySelector('.expense-dropdown');
+                dropdown.style.display = 'block';
+            }
+        
+            function hideExpenseDropdown() {
+                var dropdown = document.querySelector('.expense-dropdown');
+                dropdown.style.display = 'none';
+            }
+        
+            function showAttendanceDropdown() {
+                hideExpenseDropdown();
+                hidePayrollDropdown();
+                hideProfileDropdown();
+                hideLeaveDropdown(); // Hide other dropdowns if they are open
+                var dropdown = document.querySelector('.attendance-dropdown');
+                dropdown.style.display = 'block';
+            }
+        
+            function hideAttendanceDropdown() {
+                var dropdown = document.querySelector('.attendance-dropdown');
+                dropdown.style.display = 'none';
+            }
+        
+            function showPayrollDropdown() {
+                hideExpenseDropdown();
+                hideAttendanceDropdown();
+                hideProfileDropdown();
+                hideLeaveDropdown(); // Hide other dropdowns if they are open
+                var dropdown = document.querySelector('.payroll-dropdown');
+                dropdown.style.display = 'block';
+            }
+        
+            function hidePayrollDropdown() {
+                var dropdown = document.querySelector('.payroll-dropdown');
+                dropdown.style.display = 'none';
+            }
+        
+            function showProfileDropdown() {
+                hideExpenseDropdown();
+                hideAttendanceDropdown();
+                hidePayrollDropdown();
+                hideLeaveDropdown(); // Hide other dropdowns if they are open
+                var dropdown = document.querySelector('.profile-dropdown');
+                dropdown.style.display = 'block';
+            }
+        
+            function hideProfileDropdown() {
+                var dropdown = document.querySelector('.profile-dropdown');
+                dropdown.style.display = 'none';
+            }
+        
+            function showLeaveDropdown() {
+                hideExpenseDropdown();
+                hideAttendanceDropdown();
+                hidePayrollDropdown();
+                hideProfileDropdown(); // Hide other dropdowns if they are open
+                var dropdown = document.querySelector('.leave-dropdown');
+                dropdown.style.display = 'block';
+            }
+        
+            function hideLeaveDropdown() {
+                var dropdown = document.querySelector('.leave-dropdown');
+                dropdown.style.display = 'none';
+            }
+        </script>
+        
+          
+          
+          
+        
+        
+        
+        <!---------------------------------------------------------------------nav adding above------------------------------------------------------------>
+        
+        </div>
+        
+        
+        <!----------------------------------------------------------------------above is ---nav and banner ok ----------------------------------------------------------------------->
+        
+        
+         <!--------------------------------------------------------------------------Login and sign in page ------------------------------------------------------>   
+        
+            <div id="signInTab" style="width: 30%; display: flex; justify-content: flex-end; align-items: center;">
+                <button onclick="showSignInCard()" style="background-color: #159b9b; color: white; padding: 15px 20px; border: none; border-radius: 0; cursor: pointer; margin-right: 10px;">Sign In</button>
+                <button style="background-color: #159b9b; color: white; padding: 15px 20px; border: none; border-radius: 0; cursor: pointer;">Log In</button>
+        
+                <!-- Pop-out card (hidden by default) -->
+                <div id="signInCard" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; background-color: #add8e6; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 1;">
+                    <!-- Your Sign In Card Form goes here -->
+                    
+        <!------------------------------------------------------------ SignIn Card ---------------------------------------------------------------------------------------------------------------------->
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 600px; margin: auto; background-color: #add8e6; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: left;">
+            <h2 style="font-family: 'Georgia', serif; font-style: italic; color: #17bcce; text-align: center;">Create Your Account</h2>
+        
+            <form onsubmit="event.preventDefault(); validateSignUpForm();" style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
+        
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" oninput="formatName(this)" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+        
+                <label for="organizationName">Organization Name:</label>
+                <input type="text" id="organizationName" placeholder="Enter your organization name" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+        
+                <label for="workEmail">Work Email Address:</label>
+                <input type="email" id="workEmail" placeholder="Enter your work email address" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+        
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" placeholder="eg. 9810012345" pattern="[0-9]{10}" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+        
+                <label for="employeeCount">Number of Employees:</label>
+                <select id="employeeCount" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+                    <option value="" disabled selected>Select</option>
+                    <option value="0-5">0-5</option>
+                    <option value="6-30">6-30</option>
+                    <option value="30-100">30-100</option>
+                    <option value="100+">More than 100</option>
+                </select>
+        
+                <label for="title">Your Title:</label>
+                <select id="title" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+                    <option value="" disabled selected>Select</option>
+                    <option value="CEO/Founder">CEO/Founder</option>
+                    <option value="Finance/HR Manager">Finance/HR Manager</option>
+                    <option value="Employee">Employee</option>
+                </select>
+        
+                <label style="display: flex; align-items: center;">
+                    <input type="checkbox" id="agree" required>
+                    <span style="margin-left: 5px;">I agree to the privacy policy and terms of use.</span>
+                </label>
+        
+                <button type="submit" onclick="validateSignUpForm()" style="background-color: #159b9b; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; align-self: center;">Submit</button>
+            </form>
+        
+           
+        </div>
+        
+        <script>
+            function validateSignUpForm() {
+                const fullName = document.getElementById("fullName").value;
+                const organizationName = document.getElementById("organizationName").value;
+                const workEmail = document.getElementById("workEmail").value;
+                const phoneNumber = document.getElementById("phoneNumber").value;
+                const employeeCount = document.getElementById("employeeCount").value;
+                const title = document.getElementById("title").value;
+        
+                // Validate email format
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailRegex.test(workEmail)) {
+                    alert("Please enter a valid work email address.");
+                    return;
+                }
+        
+                // Validate phone number format
+                const phoneRegex = /^[0-9]{10}$/;
+                if (!phoneRegex.test(phoneNumber)) {
+                    alert("Please enter a valid phone number (10 digits).");
+                    return;
+                }
+        
+                // Validate other fields
+                if (!fullName || !organizationName || !employeeCount || !title) {
+                    alert("Please fill in all the required fields.");
+                    return;
+                }
+        
+                // Validate checkbox
+                if (!document.getElementById("agree").checked) {
+                    alert("Please agree to the privacy policy and terms of use.");
+                    return;
+                }
+        
+                // Additional validation or actions can be added here
+                // For now, display a success message
+                alert("Sign Up successful!");
+        
+                // Clear form fields after submission
+                document.getElementById("fullName").value = "";
+                document.getElementById("organizationName").value = "";
+                document.getElementById("workEmail").value = "";
+                document.getElementById("phoneNumber").value = "";
+                document.getElementById("employeeCount").value = "";
+                document.getElementById("title").value = "";
+                document.getElementById("agree").checked = false;
+            }
+        
+            function formatName(input) {
+                input.value = input.value.replace(/\w\S*/g, function (txt) {
+                    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                });
+            }
+        </script>
+        
+        
+                    <!-- ... -->
+        
+                    <button onclick="hideSignInCard()" style="background-color: #159b9b; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; align-self: center; margin-top: 10px;">Close</button>
+                </div>
+            </div>
+        
+        </div>
+        
+        <script>
+            function showSignInCard() {
+                document.getElementById("signInCard").style.display = "block";
+            }
+        
+            function hideSignInCard() {
+                document.getElementById("signInCard").style.display = "none";
+            }
+        </script>
+        
+        
+    
+        
+    </div>
+</div>
+        
+    
+</header>
+
+<!-----------------------------------------------------------------------completion of nav and menu's--------------------------------------------->
+
+
+
+
+
+
+
+<body>
+ 
+<!----------------------------------------------------------------Sign In box for user---------------------------------------------------->
+ 
+<!------------------------------------------------------------------------------------->
+<div style="text-align: center; margin-top: 20px;">
+  <button id="hrLoginButton" style="cursor: pointer; color: #17bcce; text-decoration: underline; margin-right: 20px;" onclick="showForm('hrLoginForm', 'employeeLoginForm', 'Sign In as Manager/HR')">HR Login</button>
+  <button id="employeeLoginButton" style="cursor: pointer; color: #17bcce; text-decoration: underline;" onclick="showForm('employeeLoginForm', 'hrLoginForm', 'Sign In as Employee')">Employee Login</button>
+</div>
+
+<form id="hrLoginForm" style="display: block; font-family: 'Arial', sans-serif; border: 1px solid #ccc; padding: 20px; border-radius: 10px; width: 400px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: auto; margin-top: 50px; text-align: center;">
+
+  <h2 style="font-family: 'Georgia', serif; font-style: italic; color: #17bcce;">Sign In as Manager/HR</h2>
+
+  <label for="nameHR" style="display: block; margin: 10px 0 8px;">Name:</label>
+  <input type="text" id="nameHR" name="nameHR" pattern="[A-Za-z\s]+" title="Please enter a valid name (only alphabetical characters and spaces)" required style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;">
+
+  <label for="emailHR" style="display: block; margin: 8px 0;">Email:</label>
+  <input type="email" id="emailHR" name="emailHR" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;" placeholder="example@example.com">
+
+  <label for="phoneNumberHR" style="display: block; margin: 8px 0;">Phone Number:</label>
+  <input type="tel" id="phoneNumberHR" name="phoneNumberHR" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;" placeholder="1234567890">
+
+  <button type="button" onclick="bookAppointment('hrLoginForm')" style="background-color: #159b9b; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+</form>
+
+<form id="employeeLoginForm" style="display: none; font-family: 'Arial', sans-serif; border: 1px solid #ccc; padding: 20px; border-radius: 10px; width: 400px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: auto; margin-top: 50px; text-align: center;">
+
+  <h2 style="font-family: 'Georgia', serif; font-style: italic; color: #17bcce;">Sign In as Employee</h2>
+
+  <label for="nameEmployee" style="display: block; margin: 10px 0 8px;">Name:</label>
+  <input type="text" id="nameEmployee" name="nameEmployee" pattern="[A-Za-z\s]+" title="Please enter a valid name (only alphabetical characters and spaces)" required style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;">
+
+  <label for="emailEmployee" style="display: block; margin: 8px 0;">Email:</label>
+  <input type="email" id="emailEmployee" name="emailEmployee" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;" placeholder="example@example.com">
+
+  <label for="phoneNumberEmployee" style="display: block; margin: 8px 0;">Phone Number:</label>
+  <input type="tel" id="phoneNumberEmployee" name="phoneNumberEmployee" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;" placeholder="1234567890">
+
+  <button type="button" onclick="submitEmployeeForm()" style="background-color: #159b9b; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+</form>
+
+<script>
+  function showForm(showId, hideId, headingText) {
+      document.getElementById(showId).style.display = 'block';
+      document.getElementById(hideId).style.display = 'none';
+      document.querySelector(`${showId} h2`).innerText = headingText;
+  }
+
+  function bookAppointment(formId) {
+      const nameInput = document.getElementById(`name${formId}`);
+      const emailInput = document.getElementById(`email${formId}`);
+      const phoneNumberInput = document.getElementById(`phoneNumber${formId}`);
+
+      if (!nameInput.checkValidity()) {
+          alert('Please enter a valid name.');
+          return;
+      }
+
+      if (!emailInput.checkValidity()) {
+          alert('Please enter a valid email address.');
+          return;
+      }
+
+      if (!phoneNumberInput.checkValidity()) {
+          alert('Please enter a valid 10-digit phone number.');
+          return;
+      }
+
+      const name = nameInput.value;
+      const email = emailInput.value;
+      const phoneNumber = phoneNumberInput.value;
+
+      // You can send this data to the backend using AJAX or other methods
+      // For simplicity, we'll just display an alert here
+      alert(`Appointment booked for ${name} with email ${email} and phone number ${phoneNumber}`);
+
+      // Close the alert popup and clear the form
+      nameInput.value = '';
+      emailInput.value = '';
+      phoneNumberInput.value = '';
+  }
+
+  function submitEmployeeForm() {
+      const nameInput = document.getElementById('nameEmployee');
+      const emailInput = document.getElementById('emailEmployee');
+      const phoneNumberInput = document.getElementById('phoneNumberEmployee');
+
+      // Automatically submit the form
+      document.getElementById('employeeLoginForm').submit();
+
+      // Clear the form
+      nameInput.value = '';
+      emailInput.value = '';
+      phoneNumberInput.value = '';
+  }
+</script>
+
+ 
+
+
+</body>
+
+</html>
