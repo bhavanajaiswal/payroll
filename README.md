@@ -1,1 +1,327 @@
 # payroll
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS - Human Resource Management System</title>
+
+    <style>
+        @media only screen and (max-width: 600px) {
+            nav {
+                flex-wrap: nowrap; /* Change from 'wrap' to 'nowrap' */
+                overflow-x: auto;
+                white-space: nowrap;
+                justify-content: center;
+            }
+    
+            nav a {
+                flex-shrink: 0;
+            }
+        }
+    </style>
+    
+    
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box;">
+
+    <header style="background-color: #add8e6; color: #fff; padding: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+        <h1 style="margin: 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">HRMS - Human Resource Management System</h1>
+    </header>
+
+    <!-- <nav style="background-color: #add8e6; display: flex; justify-content: space-around; padding: 10px; align-items: center; flex-wrap: wrap;"> -->
+        <nav style="background-color: #add8e6; display: flex; justify-content: space-around; padding: 10px; align-items: center;">
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 18px;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Home</a>
+        
+        <div style="position: relative; display: inline-block;">
+            <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 18px;" 
+               onmouseover="showEmployeeDropdown()" onmouseout="hideEmployeeDropdown()" 
+               onmouseenter="this.style.backgroundColor='#7bb2cc'" onmouseleave="this.style.backgroundColor='#add8e6'">Employee ▾</a>
+            <div class="employee-dropdown" style="display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1;" 
+                 onmouseover="showEmployeeDropdown()" onmouseout="hideEmployeeDropdown()">
+                <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">View Employees</a>
+                <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Add Employee</a>
+            </div>
+        </div>
+
+        <div style="position: relative; display: inline-block;">
+            <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 18px;" 
+               onmouseover="showExpenseDropdown()" onmouseout="hideExpenseDropdown()" 
+               onmouseenter="this.style.backgroundColor='#7bb2cc'" onmouseleave="this.style.backgroundColor='#add8e6'">Expense Claim ▾</a>
+            <div class="expense-dropdown" style="display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1;" 
+                 onmouseover="showExpenseDropdown()" onmouseout="hideExpenseDropdown()">
+                 <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">View Employees</a>
+                 <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Add Employee</a>
+            </div>
+        </div>
+
+        <!-- Add another navigation item after "Leave ▾" -->
+        <div style="position: relative; display: inline-block;">
+            <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 18px;" 
+               onmouseover="showNewDropdown()" onmouseout="hideNewDropdown()" 
+               onmouseenter="this.style.backgroundColor='#7bb2cc'" onmouseleave="this.style.backgroundColor='#add8e6'">Leave ▾</a>
+            <div class="new-dropdown" style="display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1;" 
+                 onmouseover="showNewDropdown()" onmouseout="hideNewDropdown()">
+                <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Link 1</a>
+                <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Link 2</a>
+            </div>
+        </div>
+
+        <!-- Add another navigation item after "attendence nav----------------------------------------------------------------------- ▾" -->
+       
+<div style="position: relative; display: inline-block;">
+    <input type="checkbox" id="attendance-dropdown-toggle" style="display: none;">
+    <label for="attendance-dropdown-toggle" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 18px; cursor: pointer;" 
+        onmouseover="showAttendanceDropdown()" onmouseout="hideAttendanceDropdown()" 
+        onmouseenter="this.style.backgroundColor='#7bb2cc'" onmouseleave="this.style.backgroundColor='#add8e6'">Attendance ▾</label>
+    <div class="attendance-dropdown" style="display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1;" 
+        onmouseover="showAttendanceDropdown()" onmouseout="hideAttendanceDropdown()" 
+        onmouseenter="document.getElementById('attendance-dropdown-toggle').checked = true" onmouseleave="document.getElementById('attendance-dropdown-toggle').checked = false">
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block; white-space: nowrap;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">View Attendance</a>
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block; white-space: nowrap;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Mark Attendance</a>
+    </div>
+</div>
+<!----------------------------------------------------------payroll nav-------------------------------------------------------------------------->
+<div style="position: relative; display: inline-block;">
+    <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 18px;" 
+        onmouseover="showPayrollDropdown()" onmouseout="hidePayrollDropdown()" 
+        onmouseenter="this.style.backgroundColor='#7bb2cc'" onmouseleave="this.style.backgroundColor='#add8e6'">Payroll ▾</a>
+    <div class="payroll-dropdown" style="display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1;" 
+        onmouseover="showPayrollDropdown()" onmouseout="hidePayrollDropdown()">
+        <!-- Add links or content related to Payroll here -->
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Link 1</a>
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Link 2</a>
+    </div>
+</div>
+
+
+<!----------------------------------------------- employer nav------------------------------------>
+<div style="position: relative; display: inline-block;">
+    <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 18px;" 
+        onmouseover="showEmployerDropdown()" onmouseout="hideEmployerDropdown()" 
+        onmouseenter="this.style.backgroundColor='#7bb2cc'" onmouseleave="this.style.backgroundColor='#add8e6'">Employer ▾</a>
+    <div class="employer-dropdown" style="display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1;" 
+        onmouseover="showEmployerDropdown()" onmouseout="hideEmployerDropdown()">
+        <!-- Add links or content related to Employer here -->
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Link 1</a>
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Link 2</a>
+    </div>
+</div>
+        
+
+<!---------------------------------------------incident nav-------------------------------------------------------------------------->
+<div style="position: relative; display: inline-block;">
+    <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 18px;" 
+        onmouseover="showIncidentDropdown()" onmouseout="hideIncidentDropdown()" 
+        onmouseenter="this.style.backgroundColor='#7bb2cc'" onmouseleave="this.style.backgroundColor='#add8e6'">Incident ▾</a>
+    <div class="incident-dropdown" style="display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1;" 
+        onmouseover="showIncidentDropdown()" onmouseout="hideIncidentDropdown()">
+        <!-- Add links or content related to Incident here -->
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Link 1</a>
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Link 2</a>
+    </div>
+</div>
+
+<!-----------------------------------------------document workflow------------------------------------------------------------------------>
+<div style="position: relative; display: inline-block;">
+    <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 18px;" 
+        onmouseover="showDocumentWorkflowDropdown()" onmouseout="hideDocumentWorkflowDropdown()" 
+        onmouseenter="this.style.backgroundColor='#7bb2cc'" onmouseleave="this.style.backgroundColor='#add8e6'">Document Workflow ▾</a>
+    <div class="document-workflow-dropdown" style="display: none; position: absolute; background-color: #add8e6; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1;" 
+        onmouseover="showDocumentWorkflowDropdown()" onmouseout="hideDocumentWorkflowDropdown()">
+        <!-- Add links or content related to Document Workflow here -->
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Link 1</a>
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Link 2</a>
+        <a href="#" style="color: #607d8b; text-decoration: none; padding: 10px; font-weight: bold; font-size: 16px; display: block;" onmouseover="this.style.backgroundColor='#7bb2cc'" onmouseout="this.style.backgroundColor='#add8e6'">Link 2</a>
+
+    </div>
+</div>
+
+
+
+        
+    </nav>
+
+  <!-- ... (previous HTML code) ... -->
+
+<script>
+    // JavaScript for dropdown functionality (toggle visibility)
+    function showEmployeeDropdown() {
+        hideExpenseDropdown();
+        hideNewDropdown();
+        hideAttendanceDropdown();
+        var dropdown = document.querySelector('.employee-dropdown');
+        dropdown.style.display = 'block';
+        dropdown.style.backgroundColor = '#add8e6'; // Change dropdown color when shown
+    }
+
+    function hideEmployeeDropdown() {
+        var dropdown = document.querySelector('.employee-dropdown');
+        dropdown.style.display = 'none';
+    }
+
+    function showExpenseDropdown() {
+        hideEmployeeDropdown();
+        hideNewDropdown();
+        hideAttendanceDropdown();
+        var dropdown = document.querySelector('.expense-dropdown');
+        dropdown.style.display = 'block';
+        dropdown.style.backgroundColor = '#add8e6'; // Change dropdown color when shown
+    }
+
+    function hideExpenseDropdown() {
+        var dropdown = document.querySelector('.expense-dropdown');
+        dropdown.style.display = 'none';
+    }
+
+    // Add functions for the new dropdown
+    function showNewDropdown() {
+        hideEmployeeDropdown();
+        hideExpenseDropdown();
+        hideAttendanceDropdown();
+        var dropdown = document.querySelector('.new-dropdown');
+        dropdown.style.display = 'block';
+        dropdown.style.backgroundColor = '#add8e6'; // Change dropdown color when shown
+    }
+
+    function hideNewDropdown() {
+        var dropdown = document.querySelector('.new-dropdown');
+        dropdown.style.display = 'none';
+    }
+
+    // Fix function names for the attendance dropdown
+    function showAttendanceDropdown() {
+        hideEmployeeDropdown();
+        hideExpenseDropdown();
+        hideNewDropdown();
+        var dropdown = document.querySelector('.attendance-dropdown');
+        dropdown.style.display = 'block';
+        dropdown.style.backgroundColor = '#add8e6'; // Change dropdown color when shown
+    }
+
+    function hideAttendanceDropdown() {
+        var dropdown = document.querySelector('.attendance-dropdown');
+        dropdown.style.display = 'none';
+    }
+</script>
+
+<!-------------------------adding for attendance-------------------------------------------------------------------------->
+
+<script>
+    // JavaScript for dropdown functionality (toggle visibility)
+    function showAttendanceDropdown() {
+        hideEmployeeDropdown();
+        hideExpenseDropdown();
+        hideNewDropdown();
+        var dropdown = document.querySelector('.attendance-dropdown');
+        dropdown.style.display = 'block';
+        dropdown.style.backgroundColor = '#add8e6'; // Change dropdown color when shown
+    }
+
+    function hideAttendanceDropdown() {
+        var dropdown = document.querySelector('.attendance-dropdown');
+        dropdown.style.display = 'none';
+    }
+</script>
+
+
+
+<!--------------------------------------------------------adding for payroll nav---------------------------------------->
+
+
+<script>
+    // JavaScript for dropdown functionality (toggle visibility)
+    function showPayrollDropdown() {
+        hideEmployeeDropdown();
+        hideExpenseDropdown();
+        hideNewDropdown();
+        hideAttendanceDropdown();
+        var dropdown = document.querySelector('.payroll-dropdown');
+        dropdown.style.display = 'block';
+        dropdown.style.backgroundColor = '#add8e6'; // Change dropdown color when shown
+    }
+
+    function hidePayrollDropdown() {
+        var dropdown = document.querySelector('.payroll-dropdown');
+        dropdown.style.display = 'none';
+    }
+</script>
+
+<!------------------------------------------------------------employer nav script----------------------------------------------------->
+
+<script>
+    // JavaScript for dropdown functionality (toggle visibility)
+    function showEmployerDropdown() {
+        hideEmployeeDropdown();
+        hideExpenseDropdown();
+        hideNewDropdown();
+        hideAttendanceDropdown();
+        hidePayrollDropdown();
+        var dropdown = document.querySelector('.employer-dropdown');
+        dropdown.style.display = 'block';
+        dropdown.style.backgroundColor = '#add8e6'; // Change dropdown color when shown
+    }
+
+    function hideEmployerDropdown() {
+        var dropdown = document.querySelector('.employer-dropdown');
+        dropdown.style.display = 'none';
+    }
+</script>
+<!------------------------------------------------------------------incident------------------------------------------------------------------>
+
+<script>
+    // JavaScript for dropdown functionality (toggle visibility)
+    function showIncidentDropdown() {
+        hideEmployeeDropdown();
+        hideExpenseDropdown();
+        hideNewDropdown();
+        hideAttendanceDropdown();
+        hidePayrollDropdown();
+        hideEmployerDropdown();
+        var dropdown = document.querySelector('.incident-dropdown');
+        dropdown.style.display = 'block';
+        dropdown.style.backgroundColor = '#add8e6'; // Change dropdown color when shown
+    }
+
+    function hideIncidentDropdown() {
+        var dropdown = document.querySelector('.incident-dropdown');
+        dropdown.style.display = 'none';
+    }
+</script>
+
+
+<!--------------------------------------------------------documentworkflow---------------------------------------------------------->
+
+<script>
+    // JavaScript for dropdown functionality (toggle visibility)
+    function showDocumentWorkflowDropdown() {
+        hideEmployeeDropdown();
+        hideExpenseDropdown();
+        hideNewDropdown();
+        hideAttendanceDropdown();
+        hidePayrollDropdown();
+        hideEmployerDropdown();
+        hideIncidentDropdown();
+        var dropdown = document.querySelector('.document-workflow-dropdown');
+        dropdown.style.display = 'block';
+        dropdown.style.backgroundColor = '#add8e6'; // Change dropdown color when shown
+    }
+
+    function hideDocumentWorkflowDropdown() {
+        var dropdown = document.querySelector('.document-workflow-dropdown');
+        dropdown.style.display = 'none';
+    }
+</script>
+
+
+
+
+
+
+<!----------------------------------------------nav's are end--------------------------------------------------------------------->
+<!-- ... (remaining HTML code) ... -->
+
+</body>
+</html>
+
